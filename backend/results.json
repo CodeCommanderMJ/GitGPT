@@ -1,0 +1,9 @@
+{
+  "name": "29b315f9-9564-4bd0-b72d-f993326675fb",
+  "result": {
+    "exitCode": 1,
+    "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.11.14, pytest-9.0.2, pluggy-1.6.0\nrootdir: /workspace\ncollected 4 items\n\ntests/test_calculator.py FF.F                                            [100%]\n\n=================================== FAILURES ===================================\n________________________________ test_addition _________________________________\n\n    def test_addition():\n>       assert add(2, 3) == 5\nE       assert -1 == 5\nE        +  where -1 = add(2, 3)\n\ntests/test_calculator.py:6: AssertionError\n____________________________ test_add_invalid_type _____________________________\n\n    def test_add_invalid_type():\n>       with pytest.raises(TypeError):\nE       Failed: DID NOT RAISE <class 'TypeError'>\n\ntests/test_calculator.py:10: Failed\n_____________________________ test_divide_by_zero ______________________________\n\n    def test_divide_by_zero():\n>       with pytest.raises(ZeroDivisionError):\nE       Failed: DID NOT RAISE <class 'ZeroDivisionError'>\n\ntests/test_calculator.py:19: Failed\n=========================== short test summary info ============================\nFAILED tests/test_calculator.py::test_addition - assert -1 == 5\nFAILED tests/test_calculator.py::test_add_invalid_type - Failed: DID NOT RAIS...\nFAILED tests/test_calculator.py::test_divide_by_zero - Failed: DID NOT RAISE ...\n========================= 3 failed, 1 passed in 0.49s ==========================\n",
+    "stderr": ""
+  },
+  "timestamp": "2026-02-19T15:13:00.761Z"
+}

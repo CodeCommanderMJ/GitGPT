@@ -19,3 +19,10 @@ yarn-debug.log*
 # OS junk
 .DS_Store
 Thumbs.db
+data/
+**/data/
+
+# WorkSpaces
+workspaces/
+**/workspaces/
+
