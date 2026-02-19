@@ -5,7 +5,7 @@ Live Deployment: []
 
 LinkedIn Demo: []
 
-Team Name: [SHECODES] | Team Leader: [AYUSHA SAGAR]
+Team Name: [SHECODES] | Team Leader: [AYUSHA SAGAR]  | Team Members: [ MISTHI JAISWAL, HEMANT DUA]
 
 📖 Project Overview
 GITGPT is an autonomous DevOps agent designed to eliminate the "debugging tax" that consumes 40-60% of developer time. When a CI/CD pipeline fails, GITGPT takes over: it clones the repo, identifies the root cause (syntax, logic, or linting), executes fixes in a sandboxed environment, and pushes a verified solution to a specialized branch.
