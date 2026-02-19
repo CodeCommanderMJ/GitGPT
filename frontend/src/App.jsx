@@ -56,7 +56,7 @@ function Dashboard() {
       </main>
 
       <footer className="app-footer">
-        <span>DEVOPS AGENT DASHBOARD</span>
+        <span>GITGPT</span>
         <span>Powered by Autonomous AI</span>
       </footer>
     </div>
