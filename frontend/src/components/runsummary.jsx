@@ -1,26 +1,47 @@
-import { useContext } from "react";
-import { AgentContext } from "../context/AgentContext";
+import React from 'react'
+import { useAgent } from '../context/AgentContext'
 
-const RunSummary = () => {
-  const { summary } = useContext(AgentContext);
+function StatItem({ label, value, accent }) {
+  return (
+    <div className={`stat-item ${accent ? 'accent' : ''}`}>
+      <span className="stat-label">{label}</span>
+      <span className="stat-value">{value}</span>
+    </div>
+  )
+}
 
-  if (!summary) return null;
+export default function RunSummary() {
+  const { summary } = useAgent()
+  if (!summary) return null
+
+  const passed = summary.status === 'PASSED'
 
   return (
-    <div className="card">
-      <h2>Run Summary</h2>
-      <p>Repository: {summary.repo}</p>
-      <p>Branch: {summary.branch}</p>
-      <p>Failures: {summary.failures}</p>
-      <p>Fixes Applied: {summary.fixes}</p>
-      <p>
-        Status:
-        <span className={summary.status === "PASSED" ? "green" : "red"}>
-          {summary.status}
+    <section className="card run-summary fade-in">
+      <div className="card-header">
+        <span className="section-tag">EXECUTION REPORT</span>
+        <span className={`status-badge ${passed ? 'badge-pass' : 'badge-fail'}`}>
+          {passed ? '✓ PASSED' : '✗ FAILED'}
         </span>
-      </p>
-    </div>
-  );
-};
+      </div>
 
-export default RunSummary;
+      <h2 className="section-title">Run Summary</h2>
+
+      <div className="summary-repo">
+        <span className="repo-label">REPOSITORY</span>
+        <a href={summary.repo} target="_blank" rel="noreferrer" className="repo-link">
+          {summary.repo}
+        </a>
+      </div>
+
+      <div className="stats-grid">
+        <StatItem label="Team" value={summary.team} />
+        <StatItem label="Leader" value={summary.leader} />
+        <StatItem label="Branch" value={summary.branch} accent />
+        <StatItem label="Execution Time" value={summary.time} />
+        <StatItem label="Failures Detected" value={summary.failures} />
+        <StatItem label="Fixes Applied" value={summary.fixes} accent />
+      </div>
+    </section>
+  )
+}
