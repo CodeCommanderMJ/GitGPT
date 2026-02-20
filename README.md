@@ -11,7 +11,7 @@ Team Name: [SHECODES] | Team Leader: [AYUSHA SAGAR]  | Team Members: [ MISTHI JA
 
 ## 🚀 Live Deployment
 
-🔗 **Website:** [https://your-deployment-url.vercel.app](https://your-deployment-url.vercel.app)  
+🔗 **Website:** https://new-git-gpt.vercel.app/ 
 📹 **LinkedIn Demo Video:** [Watch Here](https://linkedin.com/your-video-link)
 
 ---
